@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./../images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <script defer src="script.js"></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+
+  <header class="md:hidden">
+    <div class="flex md:hidden w-full flex-row justify-between px-4 py-6">
+      <img src="../images/logo.svg" alt="logo" />
+      <img
+        class="burger cursor-pointer"
+        src="../images/icon-menu.svg"
+        alt="burger"
+      />
+    </div>
+  </header>
+  <!-- desktop header -->
+  <header
+    class="hidden md:flex flex-row items-start py-6 px-10 transition duration-300 ease-in-out hover:text-gray-900 text-gray-500"
+  >
+    <img src="../images/logo.svg" alt="logo" class="mr-5 lg-mr-10 xl:mr-20" />
+    <nav class="flex flex-row gap-5 xl:gap-20 list-none mr-auto items-start">
+      <!-- features -->
+      <div class="flex flex-col linkContainer relative cursor:pointer group">
+        <div class="link flex flex-row items-center">
+          Features
+          <span class="imgContainer ml-2"
+            ><img
+              class="hidden arrow-up"
+              src="../images/icon-arrow-up.svg"
+              alt="arrow-up" />
+            <img
+              class="arrow-down"
+              src="../images/icon-arrow-down.svg"
+              alt="arrow-down"
+          /></span>
+        </div>
+        <div
+          class="content rounded-xl shadow-lg shadow-[#e9e9e9] absolute top-7 group-hover:flex hidden w-[200%] gap-3 items-center py-4 bg-white flex-col -translate-x-1/4"
+        >
+          <li class="hover:cursor-pointer">
+            <img
+              class="inline-block mr-2 w-[16px]"
+              src="../images/icon-todo.svg"
+              alt="todo"
+            />
+            Todo List
+          </li>
+          <li class="hover:cursor-pointer">
+            <img
+              class="inline-block mr-2 w-[16px]"
+              src="../images/icon-calendar.svg"
+              alt="calendar"
+            />
+            Calendar
+          </li>
+          <li class="hover:cursor-pointer">
+            <img
+              class="inline-block mr-2 w-[16px]"
+              src="../images/icon-reminders.svg"
+              alt="reminders"
+            />
+            Reminders
+          </li>
+          <li class="hover:cursor-pointer">
+            <img
+              class="inline-block mr-2 w-[16px]"
+              src="../images/icon-planning.svg"
+              alt="Planning"
+            />
+            Planning
+          </li>
+        </div>
+      </div>
+      <!-- company -->
+      <div class="flex flex-col linkContainer relative group">
+        <li class="flex flex-row items-center link">
+          Company
+          <span class="imgContainer ml-2"
+            ><img
+              class="hidden arrow-up"
+              src="../images/icon-arrow-up.svg"
+              alt="arrow-up" />
+            <img
+              class="arrow-down"
+              src="../images/icon-arrow-down.svg"
+              alt="arrow-down"
+          /></span>
+        </li>
+        <div
+          class="shadow-lg rounded-lg shadow-[#e9e9e9] group-hover:flex content absolute top-7 hidden w-[150%] gap-3 items-center py-4 bg-white flex-col -translate-x-1/4"
+        >
+          <li class="hover:cursor-pointer">History</li>
+          <li class="hover:cursor-pointer">Our Team</li>
+          <li class="hover:cursor-pointer">Blog</li>
+        </div>
+      </div>
+      <li>Careers</li>
+      <li>About</li>
+    </nav>
+    <div class="flex flex-row gap-3 items-center">
+      <div>Login</div>
+      <div
+        class="px-3 py-2 hover:cursor-pointer border-[#686868] bg-transparent text-black bg-[#686868] border-2 rounded-2xl text-center"
+      >
+        Register
+      </div>
+    </div>
+  </header>
+
+  <body class="relative bg-[#fafafa] text-[18px] text-[#151515] h-[100vh]">
+    <!-- dropdown for mobile -->
+    <div
+      class="hidden flex-col gap-7 lg:hidden absolute top-0 right-0 w-[70vw] sm:w-[40%] h-full bg-white dropdown px-6 py-5 list-none"
+    >
+      <img
+        class="w-6 h-6 self-end close"
+        src="../images/icon-close-menu.svg"
+        alt="men-close"
+      />
+      <!-- eachlink start -->
+      <div class="link w-full flex flex-col cursor-pointer">
+        <div class="flex flex-row gap-4 items-center imgContainer">
+          Features
+          <span class="arrow-up">
+            <img src="../images/icon-arrow-up.svg" alt="arrow-up"
+          /></span>
+          <span class="arrow-down hidden">
+            <img src="../images/icon-arrow-down.svg" alt="arrow-down"
+          /></span>
+        </div>
+        <ul class="content hidden gap-5 flex-col ml-[20%] mt-5">
+          <li>
+            <img
+              class="inline-block mr-2 w-[16px]"
+              src="../images/icon-todo.svg"
+              alt="todo"
+            />
+            Todo List
+          </li>
+          <li>
+            <img
+              class="inline-block mr-2 w-[16px]"
+              src="../images/icon-calendar.svg"
+              alt="calendar"
+            />
+            Calendar
+          </li>
+          <li>
+            <img
+              class="inline-block mr-2 w-[16px]"
+              src="../images/icon-reminders.svg"
+              alt="reminders"
+            />
+            Reminders
+          </li>
+          <li>
+            <img
+              class="inline-block mr-2 w-[16px]"
+              src="../images/icon-planning.svg"
+              alt="Planning"
+            />
+            Planning
+          </li>
+        </ul>
+      </div>
+      <!-- eachlink end -->
+      <!-- eachlink start -->
+      <div class="link w-full flex flex-col cursor-pointer">
+        <div class="imgContainer flex flex-row items-center gap-5">
+          Company
+          <span class="arrow-up">
+            <img src="../images/icon-arrow-up.svg" alt="arror-up"
+          /></span>
+          <span class="arrow-down hidden">
+            <img src="../images/icon-arrow-down.svg" alt="arrow-down"
+          /></span>
+        </div>
+        <div class="content hidden basis-full mt-5 ml-[20%]">
+          <ul class="flex gap-3 flex-col">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+      </div>
+      <!-- eachlink end -->
+      <!-- remaining -->
+      <li>Careers</li>
+      <li>About</li>
+
+      <div class="flex flex-col gap-3 items-center">
+        <div>Login</div>
+        <div
+          class="w-[80%] py-2 border-[#686868] border-2 rounded-2xl text-center"
+        >
+          Register
+        </div>
+      </div>
+    </div>
+    <!-- main body -->
+    <main
+      class="w-screen lg:py-0 lg-mt-0 mb-5 overflow-hidden text-center sm:mx-auto sm:gap-10 lg:gap-auto lg:justify-around sm:text-left sm:flex sm:flex-row sm:px-6 sm:py-1 md:p-12 sm:mt-7 sm:justify-between sm:items-center"
+    >
+      <div class="sm:order-2 md:basis-[30%]">
+        <img
+          class="w-full mb-8 md:hidden"
+          src="../images/image-hero-mobile.png"
+          alt="hero image"
+        />
+        <img
+          class="hidden mb-8 md:block md:h-auto"
+          src="../images/image-hero-desktop.png"
+          alt="hero image"
+        />
+      </div>
+
+      <div class="lg:basis-1/2">
+        <h1 class="text-4xl font-bold md:text-6xl md:mt-2">
+          Make <span class="block">remote work</span>
+        </h1>
+        <p
+          class="text-gray-500 p-5 font-medium md:w-[80%] md:px-0 md:my-6 md:text-2xl"
+        >
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button
+          class="md:mb-20 py-3 px-6 rounded-2xl bg-[#151515] text-white text-center mb-8 transition ease-in duration-300 hover:bg-transparent hover:text-[#151515] border-2 border-transparent hover:border-[#151515]"
+        >
+          Learn more
+        </button>
+        <div class="flex flex-row items-center justify-between w-full px-4">
+          <div class="basis-[20%]">
+            <img src="../images/client-databiz.svg" alt="databiz" />
+          </div>
+          <div class="basis-[20%]">
+            <img src="../images/client-audiophile.svg" alt="autophile" />
+          </div>
+          <div class="basis-[20%]">
+            <img src="../images/client-meet.svg" alt="meet" />
+          </div>
+          <div class="basis-[20%]">
+            <img src="../images/client-maker.svg" alt="maker" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<!-- 
+
+  <header
+      class="lg:px-14 flex flex-row justify-between md:justify-evenly md:py-6"
+    >
+      <div
+        class="flex flex-row justify-between md:w-auto w-full p-7 md:justify-start md:block md:p-0"
+      >
+        <img src="../images/logo.svg" alt="snap" />
+        <img
+          class="transition duration-300 ease-in md:hidden hover:cursor-pointer hover:opacity-50 burger"
+          src="../images/icon-menu.svg"
+          alt="burger"
+        />
+      </div>
+      <div
+        class="md:mr-auto md:flex flex-flow md:flex-row overflow-hidden md:w-auto md:gap-16 md:bg-transparent md:h-auto md:py-0 dropdown w-[65%] h-[100vh] flex-col hidden z-10 bg-white md:relative absolute top-0 right-0 p-6 text-[#808080]"
+      >
+        <img
+          class="self-end w-6 transition duration-300 ease-in close md:hidden hover:cursor-pointer hover:opacity-50"
+          src="../images/icon-close-menu.svg"
+          alt="menu-close"
+        />
+        <div
+          class="flex flex-wrap items-center mb-4 md:flex-row md:mb-0 relative hover:cursor-pointer"
+        >
+          <span
+            class="mr-3 transition duration-300 ease-in hover:text-gray-800 link"
+            >Features</span
+          >
+          <img
+            class="w-3 arrow-down"
+            src="../images/icon-arrow-down.svg"
+            alt="arrow down"
+          />
+          <img
+            class="hidden w-3 arrow-up"
+            src="../images/icon-arrow-up.svg"
+            alt="arrow up"
+          />
+
+          <div
+            class="content md:shadow-md md:shadow-[#e9e9e9] basis-full md:justify-center md:top-10 md:w-[200%] md:bg-red-500 md:right-0 md:rounded-xl md:p-2 hidden mt-5"
+          >
+           <ul class="md:mx-0 md:w-[80%] ml-[20%] flex gap-3 flex-col">
+              <li>
+                <img
+                  class="inline-block mr-2 w-[16px]"
+                  src="../images/icon-todo.svg"
+                  alt="todo"
+                />
+                Todo List
+              </li>
+              <li>
+                <img
+                  class="inline-block mr-2 w-[16px]"
+                  src="../images/icon-calendar.svg"
+                  alt="calendar"
+                />
+                Calendar
+              </li>
+              <li>
+                <img
+                  class="inline-block mr-2 w-[16px]"
+                  src="../images/icon-reminders.svg"
+                  alt="reminders"
+                />
+                Reminders
+              </li>
+              <li>
+                <img
+                  class="inline-block mr-2 w-[16px]"
+                  src="../images/icon-planning.svg"
+                  alt="Planning"
+                />
+                Planning
+              </li>
+            </ul> 
+          </div>
+        </div>
+        <div
+          class="flex flex-wrap items-center mb-4 md:flex-row md:mb-0 md:relative hover:cursor-pointer flex-flow"
+        >
+          <span
+            class="mr-3 transition duration-300 ease-in hover:text-gray-800 link"
+            >Company</span
+          >
+          <img
+            class="w-3 arrow-down"
+            src="../images/icon-arrow-down.svg"
+            alt="arrow down"
+          />
+          <img
+            class="hidden w-3 arrow-up"
+            src="../images/icon-arrow-up.svg"
+            alt="arrow up"
+          />
+          <div
+            class="content md:shadow-md md:shadow-[#e9e9e9] md:justify-center md:absolute md:top-10 md:w-[150%] md:bg-white md:left-0 md:rounded-xl md:p-2 hidden basis-full mt-5"
+          >
+            <ul class="md:mx-0 md:w-[80%] ml-[20%] flex gap-3 flex-col">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex items-center mb-4 hover:cursor-pointer md:mb-0">
+          <span class="mr-3 transition duration-300 ease-in hover:text-gray-800"
+            >Careers</span
+          >
+        </div>
+        <div
+          class="flex items-center mb-4 hover:cursor-pointer md:mb-0 md:items-center"
+        >
+          <span class="mr-3 transition duration-300 ease-in hover:text-gray-800"
+            >About</span
+          >
+        </div>
+        <div class="flex-row lg:gap-6 md:hidden flex">
+          <div
+            class="flex items-center mt-2 text-center md:ml-auto md:mt-0 hover:cursor-pointer hover:text-gray-800"
+          >
+            Login
+          </div>
+          <button
+            class="md:hover:bg-transparent md:w-auto md:h-auto md:px-8 md:py-2 md:mt-0 md:mx-0 md:flex md:self-center md:hover:text-black md:hover:border-black w-[80%] mx-auto border-2 hover:bg-[#686868] hover:text-white border-[#686868] text-center py-2 rounded-2xl mt-5 transition ease-in duration-300"
+          >
+            Register
+          </button>
+        </div>
+      </div>
+      <div class="flex-row lg:gap-6 hidden md:flex">
+        <div
+          class="flex items-center mt-2 text-center md:ml-auto md:mt-0 hover:cursor-pointer hover:text-gray-800"
+        >
+          Login
+        </div>
+        <button
+          class="md:hover:bg-transparent md:w-auto md:h-auto md:px-8 md:py-2 md:mt-0 md:mx-0 md:flex md:self-center md:hover:text-black md:hover:border-black w-[80%] mx-auto border-2 hover:bg-[#686868] hover:text-white border-[#686868] text-center py-2 rounded-2xl mt-5 transition ease-in duration-300"
+        >
+          Register
+        </button>
+      </div>
+-->
